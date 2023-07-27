@@ -8,21 +8,9 @@
 # testing
 /coverage
 
-# cypress
-cypress/screenshots
-cypress/videos
-
 # next.js
-/.next
-/out
-
-# next-sitemap
-public/robots.txt
-public/sitemap.xml
-public/sitemap-*.xml
-
-# cache
-.swc/
+/.next/
+/out/
 
 # production
 /build
@@ -30,21 +18,18 @@ public/sitemap-*.xml
 # misc
 .DS_Store
 *.pem
-Thumbs.db
 
 # debug
 npm-debug.log*
-pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local folder
-local
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# local env files
+.env*.local
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
