@@ -1,0 +1,61 @@
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-thumbnail-generator {
+  > img {
+    width: rem(272);
+  }
+}
+
+.convert-dangerouslySetInnerHTML {
+  // display: -webkit-box;
+  // -webkit-line-clamp: 3;
+  // -webkit-box-orient: vertical;
+  // overflow: hidden;
+  // min-height: 72px;
+  // height: 72px;
+
+  @include tablet {
+    min-height: auto;
+    height: auto;
+  }
+}
+.convert-dangerouslySetInnerHTMLs {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.img-circle {
+  width: rem(56);
+  height: rem(56);
+  object-fit: contain;
+  border: rem(2) solid #fedf89;
+  border-radius: 50%;
+}
+
+.height-cusstom-blog {
+  min-height: 127px;
+  @include tablet {
+    min-height: auto;
+  }
+}
+
+.description-date-time-blog {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: rem(14);
+  line-height: 1.5714285714285714;
+}
+
+.description-date-time-blogs {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+  margin-top: rem(8);
+}

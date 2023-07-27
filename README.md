@@ -91,3 +91,31 @@ For open source projects, say how it is licensed.
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
 
+## Update package.json
+=> Vào file package.json , chuyển hết tất cả version thành "*" ,
+
+Before:
+```
+    "dependencies": {
+    "express": "~3.2.0",
+    "mongodb": "~1.2.14",
+    "underscore": "~1.4.4",
+    "rjs": "~2.10.0",
+    "jade": "~0.29.0",
+    "async": "~0.2.7"
+  }
+```
+
+After:
+```
+  "dependencies": {
+    "express": "*",
+    "mongodb": "*",
+    "underscore": "*",
+    "rjs": "*",
+    "jade": "*",
+    "async": "*"
+  }
+```
+
+Sau đó chạy lệnh "npm update --save"

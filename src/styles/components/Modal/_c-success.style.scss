@@ -1,0 +1,31 @@
+.modal-handle-question {
+  position: absolute;
+  bottom: rem(2);
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: rem(29) rem(24) rem(29) rem(52);
+  display: flex;
+  align-items: center;
+  gap: rem(32);
+
+  &.false {
+    background-color: #f48487;
+  }
+  &.success {
+    background-color: #81b43a;
+  }
+
+  > img {
+    width: rem(68);
+    height: rem(68);
+    object-fit: cover;
+  }
+
+  .bg-txt-question-answer {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    justify-content: flex-start;
+  }
+}

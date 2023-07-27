@@ -1,0 +1,29 @@
+.modal-add-code {
+  .ant-form-item-label {
+    label {
+      color: #3e4095 !important;
+    }
+  }
+  .ant-btn {
+    border-radius: 0.25rem !important;
+    padding: 0.625rem 2rem !important;
+    height: auto !important;
+  }
+}
+.modal-add-noti {
+  .ant-form-item-label {
+    label {
+      color: #3e4095 !important;
+    }
+  }
+  .ant-btn {
+    border-radius: 0.25rem !important;
+    padding: 0.625rem 2rem !important;
+    height: auto !important;
+  }
+
+  .ant-modal-content {
+    // margin-top: 24vh;
+    border-radius: 12px !important;
+  }
+}

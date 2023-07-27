@@ -1,0 +1,25 @@
+.StudyGuide {
+  min-width: rem(865);
+  @include tablet {
+    min-width: auto;
+  }
+
+  .css-dev-only-do-not-override-1sxhfu8.ant-list-vertical
+    .ant-list-item
+    .ant-list-item-meta {
+    margin-block-end: 0px;
+  }
+  .css-dev-only-do-not-override-1sxhfu8.ant-list-vertical
+    .ant-list-item
+    .ant-list-item-meta
+    .ant-list-item-meta-title {
+    margin-block-end: 5px;
+  }
+}
+
+.al-center-home {
+  align-items: center;
+  @include tablet {
+    align-items: unset;
+  }
+}

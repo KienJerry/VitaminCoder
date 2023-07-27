@@ -1,0 +1,239 @@
+#home {
+  .slider-header {
+    background: linear-gradient(180deg, #ffffff 10.98%, #fdebeb 100%);
+    height: calc(100vh - 6rem);
+    @include tablet {
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 1025px) {
+    .slick-slide {
+      margin-top: 3rem !important;
+    }
+  }
+  .slide-item {
+    height: calc(100vh - 5rem);
+
+    @media screen and (max-width: 1025px) {
+      height: 78vh;
+    }
+  }
+  .slick-dots {
+    bottom: 7rem;
+  }
+  .slide-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 4rem;
+    transition: 0.2s;
+    background-color: #dedede;
+  }
+  .slick-active {
+    .slide-dot {
+      @apply bg-primary;
+      width: 1.3rem;
+      height: 0.6rem;
+    }
+  }
+
+  section.quote {
+    > div {
+      box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.16);
+    }
+    .quote-content {
+      padding: 1.5rem;
+      p {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  section.form-block {
+    // background: radial-gradient(
+    //   137.68% 526.37% at 6.92% 9.45%,
+    //   #3e4095 9.4%,
+    //   #ec3237 99.04%
+    // );
+    background-image: url("../../../public/assets/images/bg-section-upgrade-account.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .ant-select-selection-item {
+    color: #929292;
+  }
+}
+
+.custommer-form-upgrade {
+  display: flex;
+  min-height: rem(150);
+
+  .layout-index {
+    width: auto;
+    background-color: #95ce03;
+    padding: 16px 4px;
+    text-align: center;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .name-Price {
+      font-size: rem(40);
+      font-weight: 700;
+      line-height: 100%;
+
+      @include tablet {
+        font-size: rem(30);
+      }
+      @include mobile {
+        font-size: rem(24);
+      }
+    }
+
+    .name-originalPrice {
+      color: #ffd200;
+      font-size: rem(16);
+      font-style: italic;
+      font-weight: 500;
+      line-height: 100%;
+      margin-left: rem(100);
+      text-decoration: line-through;
+      @include tablet {
+        font-size: rem(12);
+      }
+      @include mobile {
+        margin-left: rem(50);
+      }
+    }
+
+    .name-date {
+      color: var(--primary-04, #ec3237);
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .name-desc {
+      color: var(--neutral-06, #181818);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    &.child {
+      background-color: #fff;
+      flex: 1;
+    }
+  }
+}
+
+.css-bg-respon {
+  @include tablet {
+    margin-top: rem(24) !important;
+  }
+}
+
+.NavItem-custom {
+  > div {
+    > svg {
+      filter: brightness(0) saturate(100%) invert(15%) sepia(61%)
+        saturate(2160%) hue-rotate(226deg) brightness(94%) contrast(89%);
+    }
+  }
+  // > span {
+  //   border-bottom: rem(3) solid red;
+  //   padding-bottom: rem(5);
+  // }
+}
+
+.NavItem-custom-active {
+  > div {
+    > svg {
+      filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(0%)
+        hue-rotate(178deg) brightness(97%) contrast(93%);
+    }
+  }
+}
+
+.box-expired-account {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #b9030a;
+  display: flex;
+  padding: rem(6) 0;
+  align-items: center;
+  justify-content: center;
+  width: -webkit-fill-available;
+  color: white;
+  font-size: rem(18);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  gap: rem(4);
+
+  > span {
+    color: rgb(233, 233, 233);
+    font-size: rem(16);
+    font-weight: 300;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.NavItem-custom-border {
+  // border-bottom: rem(3) solid red;
+}
+
+.line_navItem {
+  width: rem(150);
+  height: rem(5);
+  background-color: red;
+  position: absolute;
+  bottom: rem(-13);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    bottom: rem(0);
+  }
+}
+
+.custom-box-img {
+  position: absolute;
+
+  @include tablet {
+    position: relative;
+  }
+}
+
+.custom-box-home-page {
+  min-height: 70vh;
+}
+
+.custommer-sliders-homes {
+  @include tablet {
+    height: auto !important;
+  }
+}
+
+.slick-track {
+  height: 742px;
+}
+
+.css-custom-form-streak {
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: rem(24);
+    gap: rem(16);
+  }
+}

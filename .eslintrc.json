@@ -1,57 +1,91 @@
 {
   "extends": [
+    "airbnb-base",
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "rules": {
-    "react/display-name": "off",
-    "@next/next/no-img-element": "off",
-    "react/no-unescaped-entities": "off",
-    "import/no-anonymous-default-export": "off",
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@next/next/no-page-custom-font": "off",
-    "lines-around-comment": [
-      "error",
+    "prettier/prettier": [
+      1, //  0 = off, 1 = warn, 2 = error
       {
-        "beforeLineComment": false,
-        "beforeBlockComment": false,
-        "allowBlockStart": false,
-        "allowClassStart": false,
-        "allowObjectStart": false,
-        "allowArrayStart": false
-      }
-    ],
-    "newline-before-return": "error",
-    "import/newline-after-import": [
-      "error",
-      {
-        "count": 1
-      }
-    ],
-    "@typescript-eslint/ban-types": [
-      "error",
-      {
-        "extendDefaults": true,
-        "types": {
-          "{}": false
-        }
+        // "singleQuote": true,
+        "semi": true,
+        // "endOfLine": "auto",
+        "no-nested-ternary": "on",
+        "default-param-last": 0
       }
     ]
   },
-  "plugins": ["import"],
-  "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "tailwindcss",
+        "simple-import-sort"
+      ],
+      "extends": [
+        "plugin:tailwindcss/recommended",
+        "airbnb-typescript",
+        "next/core-web-vitals",
+        "plugin:prettier/recommended",
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "react/display-name": "off",
+        "tailwindcss/no-custom-classname": 0,
+        "prettier/prettier": [
+          "error",
+          {
+            // "singleQuote": false,
+            "semi": true,
+            "endOfLine": "auto",
+            "no-nested-ternary": "on",
+            "default-param-last": 0,
+   
+            // "import/no-extraneous-dependencies": "off"
+          }
+        ],
+        "react/destructuring-assignment": "off",
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "@next/next/no-img-element": "off",
+        "@typescript-eslint/comma-dangle": "off",
+        "@typescript-eslint/consistent-type-imports": "error",
+        "no-restricted-syntax": [
+          "error",
+          "ForInStatement",
+          "LabeledStatement",
+          "WithStatement"
+        ],
+        "import/prefer-default-export": "off",
+        "simple-import-sort/imports": "error", 
+        "simple-import-sort/exports": "error",
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error"
+      }
     },
-    "import/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
-        "project": ["./tsconfig.json"]
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "plugins": ["jest", "jest-formatting", "testing-library", "jest-dom"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-formatting/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended"
+      ]
+    },
+    {
+      "files": ["cypress/**/*.ts"],
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"],
+      "parserOptions": {
+        "project": "./cypress/tsconfig.json"
       }
     }
-  }
+  ]
 }

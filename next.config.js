@@ -1,26 +1,38 @@
-const path = require('path')
-const { i18n } = require('./i18n.config')
+const { i18n } = require("./i18n.config");
 
 module.exports = {
-  trailingSlash: true,
-  reactStrictMode: true,
-  swcMinify: false,
-  env: {
+  images: {
+    domains: ["www.learnupon.com"],
   },
-
-  output: 'standalone',
-  images: { domains: [''] },
-  experimental: {
-    esmExternals: false,
-    jsconfigPaths: false // enables it for both jsconfig.json and tsconfig.json
-  },
-  webpack: config => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      apexcharts: path.resolve(__dirname, './node_modules/apexcharts-clevision')
-    }
-
-    return config
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: { and: [/\.(js|ts|md)x?$/] },
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            prettier: false,
+            svgo: true,
+            svgoConfig: {
+              plugins: [
+                {
+                  name: "preset-default",
+                  params: {
+                    overrides: {
+                      // disable plugins
+                      removeViewBox: false,
+                    },
+                  },
+                },
+              ],
+            },
+            titleProp: true,
+          },
+        },
+      ],
+    });
+    return config;
   },
   i18n,
-}
+};
