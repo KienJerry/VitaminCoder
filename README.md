@@ -1,121 +1,182 @@
-# jems-fe-reactjs
+# React - Storybook – SCSS Setup with TypeScript <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px" height="25px">
 
+### Hi, I'm so glad you're here!!
 
+## Features
 
-## Getting started
+- [`ReactJS v18`](https://reactjs.org/) + [`TypeScript`](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [`React Router V6`](https://reacttraining.com/blog/react-router-v6-pre/)
+- [`Storybook v6`](https://storybook.js.org/)
+- [`ESLint`](https://eslint.org/) + [`Prettier`](https://prettier.io/) + [`Stylelint`](https://stylelint.io/)
+- [`SCSS`](https://sass-lang.com/documentation/)
+- [`Hygen`](hygen.io)
+- [`Husky`](https://github.com/typicode/husky) + [`Lint-staged`](https://github.com/okonet/lint-staged)
+- [`Atomic Design`](https://atomicdesign.bradfrost.com/chapter-2/)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Files/Directories
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+| Path                 | Purpose                                                             |
+| -------------------- | ------------------------------------------------------------------- |
+| /\_templates/        | contains scaffolding templates based on `Hygen`                     |
+| /.husky              | settings for `Husky`                                                |
+| /.storybook/         | contains Storybook config files                                     |
+| /.vscode/            | settings for `Visual Studio Code` workspace                         |
+| /patches/            | settings for `import globbing in scss` with babel                   |
+| /public/             | root folder that gets served up as our next app.                    |
+| /.hygen              | settings for `Hygen`                                                |
+| /.eslintrc           | settings for `ESLint`                                               |
+| /.prettierrc         | settings for `Prettier`                                             |
+| /.stylelintrc.json   | settings for `Stylelint`                                            |
+| /tsconfig.json       | settings for `TypeScript`                                           |
+| /lint-staged...      | config testing and building before committing                       |
+| /src                 |                                                                     |
+| \_\_\_\_/assets/     | contains images, icons, fonts, dummyData                            |
+| \_\_\_\_/components/ | contains Atomic Design components                                   |
+| \_\_\_\_/container/  | contains Logic handler                                              |
+| \_\_\_\_/hooks/      | contains custom hooks                                               |
+| \_\_\_\_/pages/      | contains handle fetching data api                                   |
+| \_\_\_\_/routes/     | contains handle router                                              |
+| \_\_\_\_/stories/    | welcome to storybook (recommend delete this folder)                 |
+| \_\_\_\_/store/      | contains shared store (Redux, Recoil,...)                           |
+| \_\_\_\_/services/   | contains shared services                                            |
+| \_\_\_\_/styles/     | contains styles: breakpoints, colors, font, mixin, function, global |
+| \_\_\_\_/types/      | contains shared types                                               |
+| \_\_\_\_/utils/      | contains functions, schemas, constants, ...others                   |
 
-## Add your files
+## Command Line
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+| Path            | Purpose                 |
+| --------------- | ----------------------- |
+| yarn start      | start the project       |
+| yarn storybook  | run the storybook       |
+| gen:component   | generate new component  |
+| gen:page        | generate new page       |
+| yarn lint       | run to check the syntax |
+| yarn lint:fix   | run to fix the syntax   |
+| yarn lint:style | run to format code scss |
+| yarn prettier   | run to format code      |
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/agn-jems/jems-fe-reactjs.git
-git branch -M main
-git push -uf origin main
-```
+---
 
-## Integrate with your tools
+## Extension
 
-- [ ] [Set up project integrations](https://gitlab.com/agn-jems/jems-fe-reactjs/-/settings/integrations)
+- vscode-eslint <img src="https://images.credly.com/images/e6eebd0c-6a17-4c06-b172-02ca9f6beb06/eslint.png" width="25px" height="25px">
+- prettier-vscode <img src="https://seeklogo.com/images/P/prettier-logo-D5C5197E37-seeklogo.com.png" width="25px" height="25px">
+- sonarlint-vscode <img src="https://www.sonarlint.org/sonarlint-og-image.png" width="25px" height="25px">
+- vscode-stylelint <img src="https://pic.vsixhub.com/3c/a8/ec35b5a3-9802-4c68-b5ff-e85f19ec0977-logo.png" width="25px" height="25px">
 
-## Collaborate with your team
+---
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### `Abem`
 
-## Test and Deploy
+<https://css-tricks.com/abem-useful-adaptation-bem/>
 
-Use the built-in continuous integration in GitLab.
+**Note: Use only the `Single_Underscore(_) && Single-Dash(-)` format for `className`.**
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+```tsx
+//GOOD 🏆🏆🏆
+export const Sample = () => (
+  <div className='a-sample'>
+    <span className='a-sample_title'>Title</span>
+  </div>
+);
 
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
-## Update package.json
-=> Vào file package.json , chuyển hết tất cả version thành "*" ,
-
-Before:
-```
-    "dependencies": {
-    "express": "~3.2.0",
-    "mongodb": "~1.2.14",
-    "underscore": "~1.4.4",
-    "rjs": "~2.10.0",
-    "jade": "~0.29.0",
-    "async": "~0.2.7"
-  }
+//NOT GOOD 💩💩💩
+export const Sample = () => (
+  <div className='a--sample'>
+    <span className='a--sample__title'>Title</span>
+  </div>
+);
 ```
 
-After:
-```
-  "dependencies": {
-    "express": "*",
-    "mongodb": "*",
-    "underscore": "*",
-    "rjs": "*",
-    "jade": "*",
-    "async": "*"
-  }
+**Note: The `className` must be formatted as `block_element-modifier`. But `Sometimes` it will be formatted as `block_element_element-modifier`.**
+
+```tsx
+//GOOD 🏆🏆🏆
+export const Sample = () => (
+  <div className='a-sample'>
+    <span className='a-sample_element'>One Element</span>
+  </div>
+);
+
+export const Sample = () => (
+  <div className='a-sample'>
+    <span className='a-sample_element1_element2'>Two elements</span>
+  </div>
+);
+
+export const Sample = () => (
+  <div className='a-sample'>
+    <span className='a-sample_element1_element2-primary'>Two elements</span>
+  </div>
+);
+
+//NOT GOOD 💩💩💩
+export const Sample = () => (
+  <div className='a-sample'>
+    <span className='a-sample_element1_element2_element3'>Greater than 2 elements</span>
+  </div>
+);
 ```
 
-Sau đó chạy lệnh "npm update --save"
+### `Components`
+
+- Use only `React-Hook`
+- Follow the `rules of hook` (<https://reactjs.org/docs/hooks-rules.html>)
+
+**Note: Use `// eslint-disable-next-line react-hooks/exhaustive-deps` when you want to avoid checking of the `useEffect` syntax (also on `useMemo & useCallback`)**
+
+```tsx
+  useEffect(() => {
+    Todo Something...
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+```
+
+**Note: Use simple syntax when the component has no properties.**
+
+```tsx
+//GOOD 🏆🏆🏆
+export const Component = () => <div>Without children...</div>;
+
+export const Component: React.FC = ({ children }) => <div>{children}</div>;
+
+//NOT GOOD 💩💩💩
+export const Component: React.FC = () => <div>Without children...</div>;
+```
+
+**Note: Clearly define the data type of the property.**
+
+```tsx
+//GOOD 🏆🏆🏆
+interface Props {
+  title: string;
+}
+
+//NOT GOOD 💩💩💩
+interface Props {
+  title: any;
+}
+```
+
+**Note: Please leave TODO when you encounter some unresolved issues immediately.**
+
+```tsx
+export const Component = () => {
+  // TODO: bla...bla...bla
+  const Problems = "Problems";
+
+  return <div>Todo Something...</div>;
+};
+```
+
+**Note: Use the filename as the component name. For example, Example.tsx should have a reference name of Example. However, for root components of a directory, use index.jsx as the filename and use the directory name as the component name:**
+
+```tsx
+//GOOD 🏆🏆🏆
+import Example from "components/atoms/Example";
+
+//NOT GOOD 💩💩💩
+import Example from "components/atoms/Example/index";
+```
+# Blog-Toolkit-Saga-Axios-Paginate
