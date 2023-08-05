@@ -1,5 +1,7 @@
 # dependencies
 /node_modules
+/public
+/package-lock.json
 /.pnp
 .pnp.js
 
@@ -23,7 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env.dev
+.env.prod
 .env.uat
 .env.staging
 # vercel
