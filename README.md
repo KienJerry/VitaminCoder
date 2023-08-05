@@ -1,60 +1,60 @@
-# React - Storybook – SCSS Setup with TypeScript <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px" height="25px">
+# Nextjs - Setup with TypeScript <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px" height="25px">
 
 ### Hi, I'm so glad you're here!!
 
 ## Features
 
-- [`ReactJS v18`](https://reactjs.org/) + [`TypeScript`](https://www.typescriptlang.org/docs/handbook/intro.html)
-- [`React Router V6`](https://reacttraining.com/blog/react-router-v6-pre/)
-- [`Storybook v6`](https://storybook.js.org/)
+- [`Nextjs v13`](https://nextjs.org/) + [`TypeScript`](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [`Redux Saga`](https://redux-saga.js.org/)
 - [`ESLint`](https://eslint.org/) + [`Prettier`](https://prettier.io/) + [`Stylelint`](https://stylelint.io/)
 - [`SCSS`](https://sass-lang.com/documentation/)
-- [`Hygen`](hygen.io)
+- [`Next-SEO v6`](https://www.npmjs.com/package/next-seo)
 - [`Husky`](https://github.com/typicode/husky) + [`Lint-staged`](https://github.com/okonet/lint-staged)
-- [`Atomic Design`](https://atomicdesign.bradfrost.com/chapter-2/)
 
 ## Files/Directories
 
 | Path                 | Purpose                                                             |
 | -------------------- | ------------------------------------------------------------------- |
-| /\_templates/        | contains scaffolding templates based on `Hygen`                     |
 | /.husky              | settings for `Husky`                                                |
-| /.storybook/         | contains Storybook config files                                     |
 | /.vscode/            | settings for `Visual Studio Code` workspace                         |
-| /patches/            | settings for `import globbing in scss` with babel                   |
 | /public/             | root folder that gets served up as our next app.                    |
-| /.hygen              | settings for `Hygen`                                                |
 | /.eslintrc           | settings for `ESLint`                                               |
 | /.prettierrc         | settings for `Prettier`                                             |
-| /.stylelintrc.json   | settings for `Stylelint`                                            |
 | /tsconfig.json       | settings for `TypeScript`                                           |
 | /lint-staged...      | config testing and building before committing                       |
 | /src                 |                                                                     |
-| \_\_\_\_/assets/     | contains images, icons, fonts, dummyData                            |
+| \_\_\_\_/common/     | contains logic code that can be reused in other components          |
 | \_\_\_\_/components/ | contains Atomic Design components                                   |
+| \_\_\_\_/constants/  | contains Router (API ,...)                                          |
 | \_\_\_\_/container/  | contains Logic handler                                              |
-| \_\_\_\_/hooks/      | contains custom hooks                                               |
-| \_\_\_\_/pages/      | contains handle fetching data api                                   |
-| \_\_\_\_/routes/     | contains handle router                                              |
-| \_\_\_\_/stories/    | welcome to storybook (recommend delete this folder)                 |
-| \_\_\_\_/store/      | contains shared store (Redux, Recoil,...)                           |
+| \_\_\_\_/interfaces/ | contains interfaces in TypeScript                                   |
+| \_\_\_\_/lang/       | contains multi language                                             |
+| \_\_\_\_/layouts/    | contains UI Design Header , Footer, Menu,...                        |
+| \_\_\_\_/pages/      | contains handle router - pages                                      |
+| \_\_\_\_/public/     | contains images, icons, fonts, dummyData                            |
 | \_\_\_\_/services/   | contains shared services                                            |
+| \_\_\_\_/store/      | contains shared store (Redux, Recoil,...)                           |
 | \_\_\_\_/styles/     | contains styles: breakpoints, colors, font, mixin, function, global |
-| \_\_\_\_/types/      | contains shared types                                               |
-| \_\_\_\_/utils/      | contains functions, schemas, constants, ...others                   |
+| \_\_\_\_/utils/      | contains functions, config, ...others                               |
+
+### Requirements
+
+- NodeJS v18.15.0 or later
+- NPM version 9.5.0
 
 ## Command Line
 
-| Path            | Purpose                 |
-| --------------- | ----------------------- |
-| yarn start      | start the project       |
-| yarn storybook  | run the storybook       |
-| gen:component   | generate new component  |
-| gen:page        | generate new page       |
-| yarn lint       | run to check the syntax |
-| yarn lint:fix   | run to fix the syntax   |
-| yarn lint:style | run to format code scss |
-| yarn prettier   | run to format code      |
+| Path               | Purpose                 |
+| -----------------  | ----------------------- |
+| npm run dev        | start the project       |
+| npm run build      | build the project       |
+| gen:component      | generate new component  |
+| gen:page           | generate new page       |
+| npm run lint       | run to check the syntax |
+| npm run lint:fix   | run to fix the syntax   |
+| npm run lint:style | run to format code scss |
+| npm run prettier   | run to format code      |
+| npm run check-type | run check code          |
 
 ---
 
@@ -179,4 +179,34 @@ import Example from "components/atoms/Example";
 //NOT GOOD 💩💩💩
 import Example from "components/atoms/Example/index";
 ```
-# Blog-Toolkit-Saga-Axios-Paginate
+# Blog-Redux-Saga-Axios-Paginate
+
+
+## Update package.json
+=> Go to package.json file, convert all versions to "*" ,
+
+Before:
+```
+    "dependencies": {
+    "express": "~3.2.0",
+    "mongodb": "~1.2.14",
+    "underscore": "~1.4.4",
+    "rjs": "~2.10.0",
+    "jade": "~0.29.0",
+    "async": "~0.2.7"
+  }
+```
+
+After:
+```
+  "dependencies": {
+    "express": "*",
+    "mongodb": "*",
+    "underscore": "*",
+    "rjs": "*",
+    "jade": "*",
+    "async": "*"
+  }
+```
+
+Then run the command "npm update --save"

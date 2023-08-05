@@ -20,26 +20,6 @@ $desktop-width: 1025px;
     @content;
   }
 }
-// @mixin mobile_tablet {
-//   @media (max-width: #{$desktop-width - 1px}) {
-//     @content;
-//   }
-// }
-// @mixin tablet_under {
-//   @media (max-width: #{$tablet-width - 1px}) {
-//     @content;
-//   }
-// }
-// @mixin tablet {
-//   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-//     @content;
-//   }
-// }
-// @mixin desktop {
-//   @media (min-width: #{$desktop-width}) {
-//     @content;
-//   }
-// }
 
 @mixin window-width-between($min-width, $max-width) {
   @if $min-width > $max-width {
