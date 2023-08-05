@@ -1,9 +1,13 @@
 import "../styles/global.css";
 import "../styles/app.scss";
 
-import { ConfigProvider } from "antd";
 import { StyleProvider } from "@ant-design/cssinjs";
-import { AppProps } from "next/app";
+import { ConfigProvider } from "antd";
+import type { AppProps } from "next/app";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+
+import config from "@/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -18,7 +22,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       }}
     >
       <StyleProvider hashPriority="high">
-        <Component {...pageProps} />
+        <Provider store={config.store}>
+          <PersistGate loading={null} persistor={config.persistor}>
+            <Component {...pageProps} />
+          </PersistGate>
+        </Provider>
       </StyleProvider>
     </ConfigProvider>
   );
