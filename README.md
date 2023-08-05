@@ -44,17 +44,17 @@
 
 ## Command Line
 
-| Path               | Purpose                 |
-| -----------------  | ----------------------- |
-| npm run dev        | start the project       |
-| npm run build      | build the project       |
-| gen:component      | generate new component  |
-| gen:page           | generate new page       |
-| npm run lint       | run to check the syntax |
-| npm run lint:fix   | run to fix the syntax   |
-| npm run lint:style | run to format code scss |
-| npm run prettier   | run to format code      |
-| npm run check-type | run check code          |
+| Path                  | Purpose                 |
+| --------------------  | ----------------------- |
+| npm run dev           | start the project       |
+| npm run build         | build the project       |
+| gen:component         | generate new component  |
+| gen:page              | generate new page       |
+| npm run lint          | run to check the syntax |
+| npm run lint:fix      | run to fix the syntax   |
+| npm run lint:style    | run to format code scss |
+| npm run prettier      | run to format code      |
+| npm run check-types   | run check code          |
 
 ---
 

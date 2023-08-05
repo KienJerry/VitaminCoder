@@ -6,11 +6,9 @@
   ],
   "rules": {
     "prettier/prettier": [
-      1, //  0 = off, 1 = warn, 2 = error
+      1,
       {
-        // "singleQuote": true,
         "semi": true,
-        // "endOfLine": "auto",
         "no-nested-ternary": "on",
         "default-param-last": 0
       }
@@ -29,7 +27,7 @@
         "plugin:tailwindcss/recommended",
         "airbnb-typescript",
         "next/core-web-vitals",
-        "plugin:prettier/recommended",
+        "plugin:prettier/recommended"
       ],
       "parserOptions": {
         "project": "./tsconfig.json"
@@ -40,13 +38,10 @@
         "prettier/prettier": [
           "error",
           {
-            // "singleQuote": false,
             "semi": true,
             "endOfLine": "auto",
             "no-nested-ternary": "on",
-            "default-param-last": 0,
-   
-            // "import/no-extraneous-dependencies": "off"
+            "default-param-last": 0
           }
         ],
         "react/destructuring-assignment": "off",

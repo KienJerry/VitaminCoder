@@ -13,6 +13,10 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
 
+  constructor(props: any) {
+    super(props);
+  }
+
   render() {
     return (
       <Html lang={AppConfig.locale}>

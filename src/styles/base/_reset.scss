@@ -1,14 +1,8 @@
 @import "../common";
 html {
-  /* ( 1 % 1440 ) * 100 -> px to rem
-    note: 1:  16px in figma 16px === 1rem
-    1440 : width size figma
-    100: 100%
-    */
-  // font-size: 0.06944444444vw;
   font-style: normal;
-  font-family: Public Sans, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body {
   margin: 0;
