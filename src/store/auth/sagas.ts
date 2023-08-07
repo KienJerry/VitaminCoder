@@ -1,6 +1,6 @@
 import { all, put, takeLatest } from "redux-saga/effects";
 
-import { RES_MESS } from "@/common/API/response.config";
+import { RES_MESS } from "@/common/config/response.config";
 import type { ResGetUserProfile } from "@/interfaces/auth.interface";
 
 // import LearnersService from "@/services/LearnersService";
