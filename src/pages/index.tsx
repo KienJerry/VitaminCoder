@@ -1,11 +1,20 @@
-import { Meta } from "@/layouts/Meta";
+import * as declaration from "@/common/config/path.config";
+import { createDynamicComponent } from "@/utils/dynamicComponent";
 
-const Index = () => {
-  return (
-    <>
-      <Meta></Meta>1
-    </>
-  );
-};
+const DynamicComponent = createDynamicComponent(declaration.DYNAMIC_TYPE.INDEX);
 
-export default Index;
+export default function Index() {
+  return <DynamicComponent />;
+}
+
+// import { Meta } from "@/layouts/Meta";
+
+// const Index = () => {
+//   return (
+//     <>
+//       <Meta></Meta>1
+//     </>
+//   );
+// };
+
+// export default Index;
