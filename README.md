@@ -37,6 +37,34 @@
 | \_\_\_\_/styles/     | contains styles: breakpoints, colors, font, mixin, function, global |
 | \_\_\_\_/utils/      | contains functions, config, ...others                               |
 
+
+
+Trans VI
+
+| Path                 | Purpose                                                             |
+| -------------------- | ------------------------------------------------------------------- |
+| /.husky              | Cài đặt cho `Husky`                                                 |
+| /.vscode/            | Cài đặt cho `Visual Studio Code` workspace                          |
+| /public/             | Nơi để chứa các thư mục gốc để phát triển các lần tiếp theo.        |
+| /.eslintrc           | Cài đặt cho `ESLint`                                                |
+| /.prettierrc         | Cài đặt cho `Prettier`                                              |
+| /tsconfig.json       | Cài đặt cho `TypeScript`                                            |
+| /lint-staged...      | kiểm tra cấu hình và xây dựng trước khi commit code                 |
+| /src                 |                                                                     |
+| \_\_\_\_/common/     | Tái sử dụng code như button , loading, input ,...                   |
+| \_\_\_\_/components/ | Là các thành phần nhỏ, có thể tái sử dụng được                      |
+| \_\_\_\_/constants/  | Chứa các thư mục không thể thay đổi ( API , URL , Config package)   |
+| \_\_\_\_/container/  | Chứa các components bên trong, dùng để call API, Redux,...          |
+| \_\_\_\_/interfaces/ | Dùng để mô tả đối tượng trong TypeScript                            |
+| \_\_\_\_/lang/       | Xử dụng nhiều ngôn ngữ                                              |
+| \_\_\_\_/layouts/    | Lưu trữ các bố cục , giao diện như header , footer                  |
+| \_\_\_\_/pages/      | Chịu trách nhiệm nội dung web , và chứa URL                         |
+| \_\_\_\_/public/     | Chứa hình ảnh , icon , font chữ,...                                 |
+| \_\_\_\_/services/   | Chịu trách nhiệm call API xuống BE                                  |
+| \_\_\_\_/store/      | Chứa store của redux                                                |
+| \_\_\_\_/styles/     | Chứa CSS , SCSS ( zậy cho nhanh )                                   |
+| \_\_\_\_/utils/      | Chứa các config như API , ngôn ngữ , ...                            |
+
 ### Requirements
 
 - NodeJS v18.15.0 or later

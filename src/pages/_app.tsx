@@ -7,19 +7,14 @@ import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
+import * as configProvider from "@/constants/configProvider";
 import config from "@/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ConfigProvider
       touch-action="pan-x pan-y"
-      theme={{
-        token: {
-          colorPrimary: "#EC3237",
-          colorFillSecondary: "#3E4095",
-          fontFamily: "Public Sans, sans-serif",
-        },
-      }}
+      theme={configProvider.ConfigProvider}
     >
       <StyleProvider hashPriority="high">
         <Provider store={config.store}>

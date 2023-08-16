@@ -1,19 +1,11 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
-import { getUserRequest } from "@/store/auth/actions";
-import { getProfileSelector } from "@/store/auth/selectors";
+import { Meta } from "@/layouts/Meta";
 
 const Index = () => {
-  const dispatch = useDispatch();
-
-  console.log(useSelector(getProfileSelector));
-
-  useEffect(() => {
-    dispatch(getUserRequest());
-  }, [dispatch]);
-
-  return <div>1</div>;
+  return (
+    <>
+      <Meta></Meta>1
+    </>
+  );
 };
 
 export default Index;
