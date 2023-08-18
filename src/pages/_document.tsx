@@ -1,22 +1,9 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
+
 import { AppConfig } from "@/utils/AppConfig";
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
-  constructor(props: any) {
-    super(props);
-  }
-
+  // eslint-disable-next-line class-methods-use-this
   render() {
     return (
       <Html lang={AppConfig.locale}>

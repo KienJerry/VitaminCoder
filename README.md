@@ -79,7 +79,7 @@ Trans VI
 | gen:component         | generate new component  |
 | gen:page              | generate new page       |
 | npm run lint          | run to check the syntax |
-| npm run lint:fix      | run to fix the syntax   |
+| npm run lint --fix      | run to fix the syntax |
 | npm run lint:style    | run to format code scss |
 | npm run prettier      | run to format code      |
 | npm run check-types   | run check code          |
