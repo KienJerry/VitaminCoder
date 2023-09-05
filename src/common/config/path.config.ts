@@ -1,3 +1,3 @@
 export const DYNAMIC_TYPE = {
-  INDEX: import("@/layouts"),
+  INDEX: import("@/containers/Homepage"),
 };

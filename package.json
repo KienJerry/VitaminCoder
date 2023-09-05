@@ -33,6 +33,7 @@
     "next": "^13.4.12",
     "next-seo": "^6.1.0",
     "next-sitemap": "^4.1.8",
+    "nextjs-progressbar": "^0.0.16",
     "npm-check-updates": "^16.10.17",
     "react": "*",
     "react-dom": "^18.2.0",

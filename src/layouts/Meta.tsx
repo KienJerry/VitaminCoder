@@ -2,10 +2,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-import type * as metaInterface from "@/interfaces/layouts/meta.interface";
+import type * as IMeta from "@/interfaces/layouts/meta.interface";
 import { AppConfig } from "@/utils/AppConfig";
 
-const Meta = (props: metaInterface.IMetaProps) => {
+const Meta = (props: IMeta.IMetaProps) => {
   const router = useRouter();
   return (
     <>
@@ -77,12 +77,12 @@ const Meta = (props: metaInterface.IMetaProps) => {
         <meta property="og:type" content="website" />
         <link
           rel="apple-touch-icon"
-          href={`${router.basePath}/apple-touch-icon.png`}
+          href={`${router.basePath}/logo-url.png`}
           key="apple"
         />
         <link
           rel="icon"
-          href={`${router.basePath}/favicon.svg`}
+          href={`${router.basePath}/logo-url.png`}
           key="favicon"
         />
       </Head>

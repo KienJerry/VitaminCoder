@@ -6,15 +6,3 @@ const DynamicComponent = createDynamicComponent(declaration.DYNAMIC_TYPE.INDEX);
 export default function Index() {
   return <DynamicComponent />;
 }
-
-// import { Meta } from "@/layouts/Meta";
-
-// const Index = () => {
-//   return (
-//     <>
-//       <Meta></Meta>1
-//     </>
-//   );
-// };
-
-// export default Index;
