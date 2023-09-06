@@ -6,4 +6,5 @@ export const AppConfig = {
   locale: "vi",
   keywords:
     "Học lập trình, Vitamin coder , ReactJs , TypeScripts, Tìm việc làm, HTML CSS",
+  url: process.env.URLS,
 };
