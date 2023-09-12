@@ -77,12 +77,12 @@ const Meta = (props: IMeta.IMetaProps) => {
         <meta property="og:type" content="website" />
         <link
           rel="apple-touch-icon"
-          href={`${router.basePath}/logo-url.png`}
+          href={`${router.basePath}/logo-url.ico`}
           key="apple"
         />
         <link
           rel="icon"
-          href={`${router.basePath}/logo-url.png`}
+          href={`${router.basePath}/logo-url.ico`}
           key="favicon"
         />
       </Head>

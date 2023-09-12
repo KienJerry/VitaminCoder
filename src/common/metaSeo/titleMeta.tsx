@@ -1,7 +1,7 @@
 export const HomePage = {
-  title: "VitaminCoder - Chào mừng bạn đến với Vitamin Coder",
+  title: "TopCV - CV xịn việc làm chất - Tạo CV & Tìm việc miễn phí",
   description:
-    "Tự học lập trình , tạo web cá nhân để nâng cao kỹ năng bản thân, có thể phục vụ cho công việc tương lai sau này và chinh phục mức lương nghìn đô",
+    "Tạo CV online & tìm việc làm miễn phí trên TopCV ngay hôm nay để tiếp cận 30.000+ cơ hội việc làm được kết nối thành công trên TopCV mỗi ngày.",
   keywords:
-    "Học lập trình, Vitamin coder , ReactJs , TypeScripts, Tìm việc làm, HTML CSS",
+    "cv,curriculum vitae,resume,tao cv,viet cv,viet cv truc tuyen,cv online,cv an tuong,mau cv dep",
 };
