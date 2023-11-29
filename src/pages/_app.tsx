@@ -12,6 +12,7 @@ import * as configProvider from "@/constants/configProvider";
 import config from "@/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log(pageProps);
   return (
     <ConfigProvider
       touch-action="pan-x pan-y"
@@ -28,5 +29,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     </ConfigProvider>
   );
 }
+
+MyApp.getInitialProps = async (appContext: any) => {
+  const initialProps = {
+    data: 123,
+  };
+
+  return { pageProps: initialProps };
+};
 
 export default MyApp;
