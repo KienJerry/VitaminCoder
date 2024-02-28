@@ -12,12 +12,13 @@ import * as configProvider from "@/constants/configProvider";
 import config from "@/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log(process.env.NEXT_PUBLIC_API_ENDPOINT, "env local");
   return (
     <ConfigProvider
       touch-action="pan-x pan-y"
       theme={configProvider.ConfigProvider}
     >
-      <NextNProgress />
+      <NextNProgress color="#00b14f" />
       <StyleProvider hashPriority="high">
         <Provider store={config.store}>
           <PersistGate loading={null} persistor={config.persistor}>

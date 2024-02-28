@@ -26,7 +26,7 @@ yarn-error.log*
 # local env files
 /.env.prod/
 .env.prod
-.env.uat
+# .env.uat
 .env.staging
 # vercel
 .vercel
