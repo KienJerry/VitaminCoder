@@ -30,4 +30,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
+MyApp.getInitialProps = async (appContext: any) => {
+  const initialProps = {
+    data: 123,
+  };
+
+  return { pageProps: initialProps };
+};
+
 export default MyApp;
